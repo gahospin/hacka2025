@@ -12,6 +12,10 @@ jobs:
       pull-requests: write
       contents: write
     steps:
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
       - name: PR Agent action step
         uses: qodo-ai/pr-agent@main
         env:
@@ -19,4 +23,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI.ORG: "PerSam"
           PR_REVIEWER.REQUIRE_TESTS_REVIEW: "false" 
-          PR_CODE_SUGGESTIONS.NUM_CODE_SUGGESTIONS: 6 
+          PR_CODE_SUGGESTIONS.NUM_CODE_SUGGESTIONS: 6
