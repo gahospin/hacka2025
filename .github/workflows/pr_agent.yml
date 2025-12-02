@@ -19,7 +19,7 @@ jobs:
       - name: PR Agent action step
         uses: qodo-ai/pr-agent@main
         env:
-          OPENAI_KEY: "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"
+          OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI.ORG: "PerSam"
           PR_REVIEWER.REQUIRE_TESTS_REVIEW: "false" 
