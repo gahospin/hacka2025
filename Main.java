@@ -7,3 +7,4 @@ import jaba.hutil;
 nahhhh
   Xz
 ZXzxZ
+print
