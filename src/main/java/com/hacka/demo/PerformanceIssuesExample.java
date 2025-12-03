@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PerformanceIssuesExample {
-    public static void main(String[] args) {
+    public void demonstrateInefficiencies() {
         // Inefficient string concatenation in a loop
         String result = "";
         for (int i = 0; i < 10000; i++) {
