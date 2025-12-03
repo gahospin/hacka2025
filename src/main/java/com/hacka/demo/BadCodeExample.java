@@ -1,6 +1,10 @@
 package com.hacka.demo;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class BadCodeExample {
-    public static void main(String[] args) {
+    public void mathCalculation() {
         int x = 10;
         int y = 0;
 
@@ -24,5 +28,14 @@ public class BadCodeExample {
         int c = a + b;
 
         System.out.println("Result: " + c);
+    }
+
+    private void listUsualConccurrentError() {
+        List<String> list = new ArrayList<>(List.of("a", "b", "c"));
+        for (String item : list) {
+            if (item.equals("b")) {
+                list.remove(item);
+            }
+        }
     }
 }
