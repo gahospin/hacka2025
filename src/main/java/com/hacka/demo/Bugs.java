@@ -17,14 +17,6 @@ public class Bugs {
 
     private int value = 0;
 
-    public boolean isOfLegalAge(int edad) {
-        return edad > 18;
-    }
-
-    public double calculateAverage(int sum, int amount) {
-        return sum / amount;
-    }
-
     public void increase() {
         value++;
     }
@@ -41,11 +33,6 @@ public class Bugs {
         String query = "SELECT * FROM usuario WHERE id = ?";
         PreparedStatement ps = conn.prepareStatement(query);
         ps.setString(1, "ABC");
-    }
-
-    public String getData() throws IOException {
-        URL url = new URL("https://api.miservicio.com/data");
-        return new String(url.openStream().readAllBytes());
     }
 
     public void search(List<String> lista, String valor) throws InterruptedException {
