@@ -1,4 +1,4 @@
-package com.sqt.model;
+package com.hacka.demo;
 
 public class Person {
     private String name;
@@ -15,5 +15,9 @@ public class Person {
 
     public void setName(String name) {
         
+    }
+
+    public int getAge() {
+        return age;
     }
 }
