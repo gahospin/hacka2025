@@ -21,4 +21,3 @@ jobs:
         env:
           OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          pr_reviewer.extra_instructions: "Focus on Java best practices, type hints, and docstrings. Please use best_practices.md in the root directory"
